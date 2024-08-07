@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ASPDAY2.Models.Instructor>
+
+@{
+    ViewData["Title"] = "Instructors";
+}
+
+<h1>Instructors</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().InsName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().InsDegree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().DeptId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InsName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InsDegree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeptId)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
